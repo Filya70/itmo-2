@@ -1,4 +1,3 @@
 function task(x){
-  const res = new Promise((res,rej) => x < 18 ? rej('no') : res('yes')).then(data => data)
-  return res
+  return new Promise((res, rej) => x < 18 ? res('yes') : rej('no'))
 }
