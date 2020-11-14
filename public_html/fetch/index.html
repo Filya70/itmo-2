@@ -11,7 +11,7 @@
     <script>
       const inp = document.querySelector('#inp');
       const btn = document.querySelector('#bt').addEventListener('click', async () => {
-        const data = await fetch('https://itmo-2.herokuapp.com/login/')
+        const data = await fetch(`${inp.value}`)
           .then((res) => res.text())
           .then((data) => (inp.value = data));
       });
